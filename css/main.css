@@ -1,8 +1,11 @@
 #main {
   background-color: whitesmoke;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='33' ry='33' stroke='%23EC3463' stroke-width='7' stroke-dasharray='11%2c 20' stroke-dashoffset='83' stroke-linecap='round'/%3e%3c/svg%3e");
+  border-radius: 33px;
   width: 80%;
   text-align: center;
-  border-radius: 40px;
+  border-color: grey;
+  box-shadow: -5px -5px 30px 5px lightpink, 5px 5px 30px 5px lightcoral;
 }
 #mainP {
   font-size: 15px;
