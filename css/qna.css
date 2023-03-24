@@ -20,5 +20,37 @@
 .answerList:hover,
 .answerList:focus {
   background-color: lightpink;
-  color: whitesmoke;
+  color: white;
+}
+.status {
+  height: 20px;
+  width: 80%;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+.statusBar {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+57,ff5c5c+100 */
+  background: #febbbb; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #febbbb 0%,
+    #fe9090 57%,
+    #ff5c5c 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #febbbb 0%,
+    #fe9090 57%,
+    #ff5c5c 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #febbbb 0%,
+    #fe9090 57%,
+    #ff5c5c 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=0 ); /* IE6-9 */
+
+  border-radius: 20px;
+  height: 100%;
 }

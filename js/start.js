@@ -1,5 +1,6 @@
 const mainBtn = document.querySelector("#mainBtn");
 const qna = document.querySelector("#qna");
+const endPoint = 12;
 
 function changeAnswerList(qIndex) {
   const preAnswerList = document.querySelectorAll(".answerList");
@@ -12,7 +13,7 @@ function changeAnswerList(qIndex) {
       i.remove();
       i.style.display = "none";
     }
-    paintQnA(qIndex + 1);
+    paintQnA(++qIndex);
   }, 450);
 }
 
@@ -29,9 +30,13 @@ function paintAnswer(answerText, qIndex) {
   answerBox.appendChild(answer);
   answer.innerHTML = answerText;
 
-  answer.addEventListener("click", () => {
-    changeAnswerList(qIndex);
-  });
+  answer.addEventListener(
+    "click",
+    () => {
+      changeAnswerList(qIndex);
+    },
+    { once: true }
+  );
 }
 
 function paintQnA(qIndex) {
@@ -40,6 +45,8 @@ function paintQnA(qIndex) {
   for (let i in qnaList[qIndex].a) {
     paintAnswer(qnaList[qIndex].a[i].answer, qIndex);
   }
+  const status = document.querySelector(".statusBar");
+  status.style.width = (100 / 12) * (qIndex + 1) + "%";
 }
 
 function handleStartButton() {
@@ -56,4 +63,4 @@ function handleStartButton() {
     paintQnA(qIndex);
   }, 450);
 }
-mainBtn.addEventListener("click", handleStartButton);
+mainBtn.addEventListener("click", handleStartButton, { once: true });
